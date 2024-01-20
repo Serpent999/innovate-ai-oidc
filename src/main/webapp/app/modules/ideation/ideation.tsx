@@ -20,7 +20,7 @@ export const Ideation = () => {
       const headers = {
         accept: 'application/json',
         'Content-Type': 'application/json',
-        Authorization: `Bearer SiQLsQnfZ1BJPwCozWjeK8VZT0y3pJof77m8tF8i`,
+        Authorization: `Bearer Ol3Q9ZkuuHR1j9xwOqyjHPUgpc75cR9o5LxoXPRl`,
       };
 
       const data = {
