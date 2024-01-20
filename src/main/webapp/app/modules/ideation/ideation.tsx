@@ -39,7 +39,7 @@ export const Ideation = () => {
       const response = await axios.post(apiEndpoint, data, { headers }).then(response => {
         // console.log(response.data.text);
         data.chat_history.push({ role: 'USER', message: text }, { role: 'CHATBOT', message: response.data.text });
-        return response.data.text;
+        return response.data.text.replace(/\n/g, '');
       });
 
       const botMessage = { text: JSON.stringify(response), sender: 'bot' };
