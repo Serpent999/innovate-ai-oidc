@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  innovate_ai_oidc-app:
+    build: ../../..
+    container_name: innovate_ai_oidc-app
+    environment:
+      - NODE_CLIENT_PROVIDER_OIDC_ISSUER_URI=http://keycloak:9080/auth/realms/jhipster
+      - BACKEND_ENV=dev
+    ports:
+      - 8081:8081
+  keycloak:
+    extends:
+      file: keycloak.yml
+      service: keycloak
