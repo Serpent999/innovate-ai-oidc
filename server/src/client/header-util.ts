@@ -53,7 +53,7 @@ export class HeaderUtil {
     }
 
     private static prepareLink(url, pageNumber, pageSize, relType): any {
-        url = new URL('http://localhost' + url);
+        url = new url('http://localhost' + url);
         url.searchParams.set('page', pageNumber);
         url.searchParams.set('size', pageSize);
         url = url.toString().replace('http://localhost', '');

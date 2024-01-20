@@ -28,7 +28,7 @@ export const Home = (props: IHomeProp) => {
       </Col>
       <Col md="9">
         <h2>
-          <Translate contentKey="home.title">Welcome, Java Hipster!</Translate>
+          <Translate contentKey="home.title">Welcome to Innovate_ai</Translate>
         </h2>
         <p className="lead">
           <Translate contentKey="home.subtitle">This is your homepage</Translate>
@@ -55,6 +55,13 @@ export const Home = (props: IHomeProp) => {
                 <br />- User (login=&quot;user&quot; and password=&quot;user&quot;).
               </Translate>
             </Alert>
+
+            <Alert color="warning">
+              <Translate contentKey="global.messages.info.register.noaccount">You do not have an account yet?</Translate>&nbsp;
+              <Link to="/account/register" className="alert-link">
+                <Translate contentKey="global.messages.info.register.link">Register a new account</Translate>
+              </Link>
+            </Alert>
           </div>
         )}
         <p>
@@ -63,35 +70,20 @@ export const Home = (props: IHomeProp) => {
 
         <ul>
           <li>
-            <a href="https://www.jhipster.tech/" target="_blank" rel="noopener noreferrer">
-              <Translate contentKey="home.link.homepage">JHipster homepage</Translate>
+            <a href="/ideation" target="_blank" rel="noopener noreferrer">
+              <Translate contentKey="home.link.ideation">JHipster homepage</Translate>
             </a>
           </li>
           <li>
-            <a href="http://stackoverflow.com/tags/jhipster/info" target="_blank" rel="noopener noreferrer">
-              <Translate contentKey="home.link.stackoverflow">JHipster on Stack Overflow</Translate>
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/jhipster/generator-jhipster-nodejs/issues?state=open" target="_blank" rel="noopener noreferrer">
-              <Translate contentKey="home.link.bugtracker">NHipster bug tracker</Translate>
-            </a>
-          </li>
-          <li>
-            <a href="https://gitter.im/jhipster/generator-jhipster-nodejs" target="_blank" rel="noopener noreferrer">
-              <Translate contentKey="home.link.chat">NHipster public chat room</Translate>
-            </a>
-          </li>
-          <li>
-            <a href="https://twitter.com/java_hipster" target="_blank" rel="noopener noreferrer">
-              <Translate contentKey="home.link.follow">follow @java_hipster on Twitter</Translate>
+            <a href="/option" target="_blank" rel="noopener noreferrer">
+              <Translate contentKey="home.link.option">JHipster on Stack Overflow</Translate>
             </a>
           </li>
         </ul>
 
         <p>
-          <Translate contentKey="home.like">If you like NHipster, do not forget to give us a star on</Translate>{' '}
-          <a href="https://github.com/jhipster/generator-jhipster-nodejs" target="_blank" rel="noopener noreferrer">
+          <Translate contentKey="home.like">If you like Innovate AI, do not forget to give us a star on</Translate>{' '}
+          <a href="https://github.com/Serpent999/innovate-ai" target="_blank" rel="noopener noreferrer">
             Github
           </a>
           !
