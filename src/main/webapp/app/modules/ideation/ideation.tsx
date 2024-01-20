@@ -28,20 +28,11 @@ export const Ideation = () => {
         connectors: [{ id: 'web-search' }],
       };
       const response = await axios.post(apiEndpoint, data, { headers }).then(response => {
-        console.log(response);
-      }); /*axios({
-        method: 'post', //you can set what request you want to be
-        url: 'https://api.cohere.ai/v1/chat',
-        data: { message: text},
-        headers: {
-           Authorization: 'Bearer ' + ' ',
-         }
-      })*/ /*axios.post(
-        "https://api.cohere.ai/v1/chat",
+        // console.log(response.data.text);
+        return response.data.text;
+      });
 
-        { message: text },
-      );*/
-      const botMessage = { text: 'JSON.stringify(response)', sender: 'bot' };
+      const botMessage = { text: JSON.stringify(response), sender: 'bot' };
       setMessages(prevMessages => [...prevMessages, userMessage, botMessage]);
     } catch (error) {
       console.error('Error sending message:', error);
@@ -63,4 +54,17 @@ const mapDispatchToProps = { mapStateToProps };
 
 type StateProps = ReturnType<typeof mapStateToProps>;
 
-export default connect(mapStateToProps)(Ideation);
+export default connect(mapStateToProps)(Ideation); /*axios.post(
+        "https://api.cohere.ai/v1/chat",
+
+        { message: text },
+      );*/
+
+/*axios({
+        method: 'post', //you can set what request you want to be
+        url: 'https://api.cohere.ai/v1/chat',
+        data: { message: text},
+        headers: {
+           Authorization: 'Bearer ' + ' ',
+         }
+      })*/
