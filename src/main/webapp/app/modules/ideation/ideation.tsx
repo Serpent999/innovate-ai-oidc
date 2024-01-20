@@ -23,7 +23,7 @@ export const Ideation = () => {
         Authorization: `Bearer Ol3Q9ZkuuHR1j9xwOqyjHPUgpc75cR9o5LxoXPRl`,
       };
 
-      const data = {
+      var data = {
         chat_history: [
           // {"role": "USER", "message": ""},
           {
@@ -38,7 +38,7 @@ export const Ideation = () => {
       };
       const response = await axios.post(apiEndpoint, data, { headers }).then(response => {
         // console.log(response.data.text);
-        data.chat_history.push({ role: 'USER', message: 'userMessage' }, { role: 'CHATBOT', message: response.data.text });
+        data.chat_history.push({ role: 'USER', message: text }, { role: 'CHATBOT', message: response.data.text });
         return response.data.text;
       });
 
