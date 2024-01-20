@@ -9,9 +9,10 @@ import { AuthorityRepository } from '../repository/authority.repository';
 
 import { PublicUserController } from '../web/rest/public.user.controller';
 import { AccountController } from '../web/rest/account.controller';
+import { IdeationModule } from './ideation/ideation.module';
 
 @Module({
-    imports: [TypeOrmModule.forFeature([AuthorityRepository]), UserModule, PassportModule, HttpModule],
+    imports: [TypeOrmModule.forFeature([AuthorityRepository]), UserModule, PassportModule, HttpModule, IdeationModule],
     controllers: [UserOauth2Controller, PublicUserController, AccountController],
     providers: [AuthService, Oauth2Strategy],
     exports: [AuthService],
